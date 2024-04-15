@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+}
+p{
+    margin-top: 200px;
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.p1{
+    color: white;
+    position: absolute;
+}
+.p2{
+    color: purple;
+    position: absolute;
+    opacity: 0;
+    animation-name: text;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background-color: transparent;
+}
+.circle{
+    width:90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 200px;
+    position: relative;
+    animation-name: circle;
+    animation-timing-function:linear;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes circle {
+    0% {
+        top: 30px;
+        right: -400px;
+        
+    }
+    50% {
+        top: 30px;
+        right: 0px;
+    }
+    100% {
+        top: 30px;
+        right: 400px;
+    }
+} 
+@keyframes text {
+    from {
+        opacity:0;
+        z-index: 100;
+    }
+    to {
+        opacity: 1;
+        z-index: 100;
+    }
+    /* 100% {
+        opacity: 1;
+        z-index: 100;
+    } */
+} 
